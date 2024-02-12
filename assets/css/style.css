@@ -134,6 +134,7 @@ body{
 .banner-sec .social-box {
   top: 50%;
 }
+
 /**HOME PAGE BANNER SECTION******/
 /**********/
 /*****HOME PAGE SOCIAL SECTION*****/
@@ -476,11 +477,27 @@ transform: translateY(5px);
   }
 /* gallery style */
 /* HOME PAGE PLAN SECTION STYLE */
+  
+  .plans-section {
+    background-color: #000;
+  }
+
+  .plans-section .row {
+      background-color: var(--secondary-color);
+      padding-top: 20px;
+      padding: 20px;
+      padding-bottom: 100px;
+  }
+  .plans-section .wrapper3 .other-services-btn {
+    margin-top: -90px;
+  }
+
   .plans-section .generic-title{
       margin-bottom: 65px;
   }
+
   .plans-section .generic-title span{
-    margin-bottom: 25px;
+      margin-bottom: 25px;
   }
   .plan-box{
       border-radius: 10px;
@@ -488,11 +505,11 @@ transform: translateY(5px);
       transition: .3s ease-in-out;
   }
   .plan-box .price{
-    font-size: 54px;
-    line-height: 60px;
-    margin-bottom: 22px;
-    color: var(--accent);
-    display: inline-block;
+      font-size: 54px;
+      line-height: 60px;
+      margin-bottom: 22px;
+      color: var(--accent);
+      display: inline-block;
   }
   .plan-box .price span {
       font-size: 24px;
@@ -540,10 +557,9 @@ transform: translateY(5px);
   }
 
   .wrapper3 .generic-btn {
-    text-align: center;
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 60px;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 20px;
   }
 /* HOME PAGE PLAN SECTION STYLE */
 /* HOME PAGE VIDEO SECTION STYLE */
@@ -946,6 +962,11 @@ transform: translateY(5px);
 /* FOOTER SECTION STYLE */
 /* ABOUT PAGE STYLE */
 /* ABOUT PAGE BANNER SECTION STYLE */
+  .about-banner {
+    width: 100%;
+    display: block;
+    margin-top: 0;
+  }
   .about-banner .banner-left-sec p,
   .about-banner .banner-left-sec span {
     font-size: 16px;
@@ -962,7 +983,7 @@ transform: translateY(5px);
   .banner-sec.about-banner::after{
     display: none;
   }
-  .banner-sec.about-banner::before{
+  .banner-sec::before {
     top: 0;
     left: 0;
     content: "";
@@ -970,8 +991,29 @@ transform: translateY(5px);
     height: 1360px;
     position: absolute;
     background: url(../images/about-before-img.png) no-repeat center;
-    background-size: cover;
+    background-size: fill;
   }
+
+  .banner-sec2::before {
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 506px;
+    position: absolute;
+    background: url(../images/about-before-img.png) no-repeat center;
+    background-size: fill;
+  }
+
+  .banner-sec2 {
+    height: 506px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+    background-size: fill 406px;
+  }
+
   .banner-review-box {
     left: -5px;
     bottom: 50px;
@@ -1019,6 +1061,105 @@ transform: translateY(5px);
     margin-left: 5px;
   }
 /* ABOUT PAGE BANNER SECTION STYLE */
+
+
+/* TIMELINE SECTION STYLE */
+
+.timeline-sec {
+  padding: 50px 0;
+}
+
+.timeline-title {
+  padding: 0 15px;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--button-color);
+  transform: translateX(-50%);
+}
+
+.timeline-point {
+  position: relative;
+  margin-bottom: 50px;
+  width: calc(50% - 10px);
+  padding-left: 25px;
+}
+
+.timeline-point::before {
+  content: attr(data-year);
+  position: absolute;
+  left: -25px;
+  top: 0;
+  background-color: var(--button-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.timeline-point h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.timeline-point img {
+  width: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/* TIMELINE SECTION STYLE */
+/* ABOUT PAGE VISUAL GRAPHICS SECTION STYLE */
+.visual-graphics-box .about-details-box ul li{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 48px;
+  padding-left: 40px;
+  margin-bottom: 0px;
+  letter-spacing: -1px;
+  color: var(--primary-color);
+}
+.visual-graphics-box .about-details-box ul li figure{
+  left: 0;
+  top: -2px;
+  position: absolute;
+}
+.visual-graphics-box .about-details-box ul{
+  margin-bottom: 45px;
+}
+.visual-small-img {
+  right: 43px;
+  bottom: -100px;
+  position: absolute;
+}
+.visual-graphics-box .about-details-box {
+  padding-left: 25px;
+  padding-right: 75px;
+}
+.visual-graphics-box .generic-title span {
+  margin-bottom: 15px;
+}
+.visual-graphics-box .about-details-box p {
+  margin-bottom: 25px;
+}
+.visual-graphics-box{
+  padding-bottom: 200px;
+}
+/* ABOUT PAGE VISUAL GRAPHICS SECTION STYLE */
 /* ABOUT PAGE COLLECTION SECTION STYLE */
   .about-collection-sec .generic-title {
     margin-bottom: 68px;
@@ -1027,43 +1168,6 @@ transform: translateY(5px);
     padding: 42px 28px 32px;
   }
 /* ABOUT PAGE COLLECTION SECTION STYLE */
-/* ABOUT PAGE VISUAL GRAPHICS SECTION STYLE */
-  .visual-graphics-box .about-details-box ul li{
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 48px;
-    padding-left: 40px;
-    margin-bottom: 0px;
-    letter-spacing: -1px;
-    color: var(--primary-color);
-  }
-  .visual-graphics-box .about-details-box ul li figure{
-    left: 0;
-    top: -2px;
-    position: absolute;
-  }
-  .visual-graphics-box .about-details-box ul{
-    margin-bottom: 45px;
-  }
-  .visual-small-img {
-    right: 43px;
-    bottom: -100px;
-    position: absolute;
-  }
-  .visual-graphics-box .about-details-box {
-    padding-left: 25px;
-    padding-right: 75px;
-  }
-  .visual-graphics-box .generic-title span {
-    margin-bottom: 15px;
-  }
-  .visual-graphics-box .about-details-box p {
-    margin-bottom: 25px;
-  }
-  .visual-graphics-box{
-    padding-bottom: 200px;
-  }
-/* ABOUT PAGE VISUAL GRAPHICS SECTION STYLE */
 /* ABOUT PAGE TEAMS SECTION STYLE*/
   .team-section .posted-details ul li {
     font-size: 16px;
