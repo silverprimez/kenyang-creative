@@ -927,6 +927,7 @@ transform: translateY(5px);
     display: inline-block;
     vertical-align: middle;
     padding: 11px 10px 10px;
+    appearance: none;
     -webkit-appearance: none;
     background: rgb(255 255 255 / 10%);
   }
@@ -1744,7 +1745,7 @@ transform: translateY(5px);
   .service-logo-slider figure img{
     opacity: 0.4;
   }
-  /* TESTIONIAL SECTION */
+  /* TESTIMONIAL SECTION */
   /* BLOG SECTION */
   .blog-post2-box {
     gap: 30px;
@@ -2025,6 +2026,16 @@ transform: translateY(5px);
     opacity: 1;
     visibility: visible;
   }
+
+  @keyframes spineer {
+    from {
+    box-shadow: 0 0 0 0 rgba(0, 252, 219, .99)
+    }
+    to {
+    box-shadow: 0 0 0 45px rgba(0, 252, 219, .01)
+    }
+  }
+
   @-webkit-keyframes spineer {
     from {
     box-shadow: 0 0 0 0 rgba(0, 252, 219, .99)

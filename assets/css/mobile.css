@@ -401,6 +401,11 @@
     .wrapper2{
         padding: 0 15px;
     }
+
+    .wrapper3 {
+        padding: 0 15px;
+    }
+
     .reviews-section .owl-carousel .owl-nav button.owl-prev, .reviews-section .owl-carousel .owl-nav button.owl-next {
         position: relative;
     }
@@ -1824,7 +1829,7 @@
     .plans-section .generic-title span {
         margin-bottom: 8px;
     }
-    .plans-section .wrapper2 > .row{
+    .plans-section .wrapper3 > .row{
         gap: 30px;
     }
     .plans-section .generic-title {
@@ -1861,7 +1866,7 @@
     .feature-section .row {
         gap: 12px;
     }
-    .plans-section .wrapper2 > .row {
+    .plans-section .wrapper3 > .row {
         gap: 20px;
     }
     .blogs-section .row {
