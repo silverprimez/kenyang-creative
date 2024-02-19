@@ -3,8 +3,8 @@
         padding: 0 15px;
     }
 }
+
 @media only screen and (max-width:1600px) {
-    
     .design-con {
         padding-bottom: 165px;
     }
@@ -64,6 +64,7 @@
         right: -60px;
       }
 }
+
 @media only screen and (max-width:1440px){
     .swiper-wrapper figure img {
         width: 100%;
@@ -426,6 +427,7 @@
         margin-bottom: 0;
     }
 }
+
 @media only screen and (max-width:1199px){
     .sponsers-sec {
         padding-left: 50px;
@@ -920,6 +922,7 @@
         font-size: 14px;
     }
 }
+
 @media only screen and (max-width:991px){
     .navbar-main-sec .nav-item.dropdown {
         width: 92.5%;
@@ -1521,6 +1524,7 @@
         margin-bottom: 35px;
     }
 }
+
 @media only screen and (max-width:767px){
     .generic-btn a, .generic-btn button {
         padding: 14px 28px;
@@ -1878,6 +1882,7 @@
         margin-bottom: 14px;
     }
 }
+
 @media only screen and (max-width:575px){
     .navbar-main-sec .nav-item.dropdown {
         width: 85%;
