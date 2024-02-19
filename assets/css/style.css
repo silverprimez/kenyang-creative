@@ -1066,61 +1066,174 @@ transform: translateY(5px);
 /* TIMELINE SECTION STYLE */
 
 .timeline-sec {
-  padding: 50px 0;
-}
-
-.timeline-title {
-  padding: 0 15px;
-}
-
-.timeline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: var(--button-color);
-  transform: translateX(-50%);
-}
-
-.timeline-point {
-  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
   margin-bottom: 50px;
-  width: calc(50% - 10px);
-  padding-left: 25px;
+}
+.timeline {
+  margin: auto;
+  max-width: 100vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.timeline-point::before {
-  content: attr(data-year);
+#timeline-point {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 65px;
+}
+
+#timeline-point ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 9999;
   position: absolute;
-  left: -25px;
-  top: 0;
-  background-color: var(--button-color);
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  margin-top: -40px;
+}
+
+#timeline-point li::before { /*Above big circle */
+  content: "";
+  display: block;
+  margin: auto; 
+  width: 30px; 
+  height: 30px; 
   border-radius: 50%;
+  border: solid 2px var(--text-color);
+  transition: all ease 0.3s;
+  background-color: var(--primary-color);
+}
+
+#timeline-point li.active:before, #timeline-point li:hover::before { /*Above big circle */
+  border: solid 2px var(--primary-color);
+  background: var(--button-color); 
+}
+
+#timeline-point li { /*Date*/
+  list-style: none;
+  float: left;
+  width: 25%; /*IF NEED TO ADD MORE DATE, ADJUST THIS*/
   text-align: center;
-  line-height: 20px;
-  font-weight: bold;
+  color: var(--text-color); 
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease 0.2s;
+  vertical-align: bottom;
+  height: 60px;
+  position: relative;
 }
 
-.timeline-point h3 {
-  font-size: 1.5em;
-  margin-top: 0;
+#timeline-point li .date-inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
 }
 
-.timeline-point img {
-  width: auto;
-  border-radius: 10px;
-  margin-top: 10px;
+#timeline-point li.active, #timeline-point li:hover {
+  color:var(--primary-color);
+}
+
+#timeline-point li:after { /*Below small circle*/
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-color);
+  margin: auto;
+  border: solid 7px var(--primary-color);
+  border-radius: 50%;
+  margin-top: 47.5px;
+  box-shadow: 0 2px 13px -1px rgba(0,0,0,0.3);
+  transition: all ease 0.2s;
+}
+
+#timeline-point li:hover::after {
+  background: var(--text-color);
+}
+
+#timeline-point li.active:after {
+  background: var(--secondary-color);
+}
+
+#timeline-point #line { /*Progress LINE*/
+  width: 75%; /*The length*/
+  margin-right: auto;
+  background: var(--primary-color);
+  height: 6px;
+  position: absolute;
+  left: 13%;
+  top: 57px;
+  z-index: 1;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#timeline-point #line-process {
+  content: "";
+  width: 3%;
+  height: 100%;
+  background: var(--button-color);
+  background: linear-gradient (to right, yellow 0%, green 100%);
+  position: absolute;
+  z-index: 2;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-content-section {
+  width: 90%;
+  margin: auto;
+  background: none;
+  border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+#progress-content-section .section-content h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+#progress-content-section .section-content p {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: var(--primary-color);
+}
+
+#progress-content-section .section-content {
+  display: none;
+  animation: FadeInUp 700ms ease 1;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+#progress-content-section .section-content.active {
+  display: block;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 /* TIMELINE SECTION STYLE */
 /* ABOUT PAGE VISUAL GRAPHICS SECTION STYLE */
